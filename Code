@@ -1,0 +1,35 @@
+totalmoney = int(0)
+start = "yes"
+addremove = "add"
+
+while start == "yes": 
+ addremove = input("Did you add or remove Money? ")
+ if addremove == "add":
+  added = input("What amount of money did you add?(in cents) ")
+  added = int(added)
+  totalmoney = totalmoney + added
+  totalmoney = totalmoney / 100
+  if totalmoney < 0:
+    totalmoney = int(0)
+    print("You have ",totalmoney,"€")
+    added = int(0)
+    start = "yes"
+  else:
+    print("You have ",totalmoney,"€")
+    added = int(0)
+    start = "yes"
+ else:
+   if addremove == "remove":
+    removed = input("What amount of money did you remove?(in cents) ")
+    removed = int(removed)
+    totalmoney = totalmoney - removed
+    totalmoney = totalmoney / 100
+    if totalmoney < 0:
+      totalmoney = int(0)
+      print("You have ",totalmoney,"€")
+      removed = int(0)
+      start = "yes"
+    else:
+      print("You have ",totalmoney,"€")
+      removed = int(0)
+      start = "yes"
